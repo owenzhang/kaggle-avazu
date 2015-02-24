@@ -28,8 +28,8 @@ rf_pred = load(utils.tmp_data_path + 'rf_pred_v.joblib_dat')
 print "RF prediction loaded with shape", rf_pred.shape
 
 #GBDT (xgboost) model output
-#xgb_pred = load(utils.tmp_data_path + 'xgb_pred_v.joblib_dat')
-#print "xgb prediction loaded with shape", xgb_pred.shape
+xgb_pred = load(utils.tmp_data_path + 'xgb_pred_v.joblib_dat')
+print "xgb prediction loaded with shape", xgb_pred.shape
 
 #Vowpal Wabbit model output
 ctr = 0
@@ -57,8 +57,8 @@ pred = 0
 
 pred += rf_pred * blending_w['rf']
 total_w += blending_w['rf']
-#pred += xgb_pred * blending_w['xgb']
-#total_w += blending_w['xgb']
+pred += xgb_pred * blending_w['xgb']
+total_w += blending_w['xgb']
 pred += vw_pred * blending_w['vw']
 total_w += blending_w['vw']
 pred += fm_pred * blending_w['fm']
