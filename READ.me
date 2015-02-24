@@ -1,0 +1,17 @@
+To reproduce the result:
+
+1. Clone the github repo, go to the folder
+2. Set paths in the utils.py file
+3. sh ./_0_run_me.sh
+
+
+The shell script will run the model 3 times
+
+1. a small sample run using day 30 as validation -- should take about 1-2 hours and generate .393-394 logloss
+2. a small sample run using day 31 as test -- should get LB score about .391-.392
+3. a full run using day 31 as test -- should get LB score that ranks 2nd. 
+
+Please note that the full run will take about 2 days, and require 130GB of temporary storage space. So highly recommended run it over the weekend, after step 1 and 2 are successful.
+
+This process CAN be made much more efficient with a few hours work by a REAL software engineer.
+
